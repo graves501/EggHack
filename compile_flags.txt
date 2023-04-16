@@ -1,0 +1,6 @@
+# Used for clangd/neovim
+# https://stackoverflow.com/questions/73395641/in-included-file-begin-code-h-file-not-found-occurring-in-neovim-lsp
+-Wall
+-L/usr/local/lib
+-Iinclude
+/usr/local/include

@@ -45,6 +45,8 @@
 #if !defined(NOTTYGRAPHICS)
 #define TTY_GRAPHICS /* good old tty based graphics */
 #endif
+
+#define WEB_GRAPHICS /* Web browser interface */
 /* #define CURSES_GRAPHICS *//* Curses interface - Karl Garrison*/
 /* #define X11_GRAPHICS */   /* X11 interface */
 /* #define QT_GRAPHICS */    /* Qt interface */
@@ -57,6 +59,12 @@
  *
  *      tty, X11, mac, amii, BeOS, Qt, Gem, Gnome
  */
+
+/* Web browser graphics */
+#ifdef WEB_GRAPHICS
+#define DEFAULT_WINDOW_SYS "web"
+#define GRAPHIC_TOMBSTONE
+#endif
 
 /* MAC also means MAC windows */
 #ifdef MAC
@@ -261,7 +269,7 @@
  *
  */
 
-#if defined(UNIX) && !defined(ZLIB_COMP) && !defined(COMPRESS)
+#if defined(UNIX) && !defined(WEB_GRAPHICS) && !defined(ZLIB_COMP) && !defined(COMPRESS)
 /* path and file name extension for compression program */
 #define COMPRESS "/usr/bin/compress" /* Lempel-Ziv compression */
 #define COMPRESS_EXTENSION ".Z"      /* compress's extension */
