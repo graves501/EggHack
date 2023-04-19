@@ -1,4 +1,6 @@
 #include "hack.h"
+// TODO graves: Find out how to properly include
+// #include "emscripten.h"
 
 // Interface Specification, see window.doc
 

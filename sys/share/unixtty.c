@@ -36,7 +36,8 @@
 #define termstruct termio
 #endif
 #endif /* POSIX_TYPES */
-#ifdef LINUX
+// TODO graves
+#ifdef LINUX && !defined(WEB_GRAPHICS)
 #include <sys/ioctl.h>
 #undef delay_output /* curses redefines this */
 #include <curses.h>

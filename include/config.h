@@ -350,7 +350,9 @@
  */
 #define INSURANCE /* allow crashed game recovery */
 
-#ifndef MAC
+// TODO graves
+// #ifndef MAC
+#if !defined(MAC) && !defined(WEB_GRAPHICS)
 #define CHDIR /* delete if no chdir() available */
 #endif
 

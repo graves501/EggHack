@@ -603,10 +603,12 @@ all:	$(GAME)
 # below in the 'make depend' output.
 monst.o:
 	$(CC) $(CFLAGS) -c monst.c
+	# TODO graves
 	@rm -f $(MAKEDEFS)
 
 objects.o:
 	$(CC) $(CFLAGS) -c objects.c
+	# TODO graves
 	@rm -f $(MAKEDEFS)
 
 # Qt 3 windowport meta-object-compiler output
@@ -642,6 +644,7 @@ qt4yndlg.moc : ../win/Qt4/qt4yndlg.h
 	$(QTDIR)/bin/$(MOC) -o qt4yndlg.moc ../win/Qt4/qt4yndlg.h
 
 #	build monst.o and objects.o before executing '$(MAKE) makedefs'
+# TODO graves
 $(MAKEDEFS): $(FIRSTOBJ) \
 		../util/makedefs.c $(CONFIG_H) ../include/permonst.h \
 		../include/objclass.h ../include/monsym.h \

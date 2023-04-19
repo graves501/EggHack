@@ -32,14 +32,17 @@
                      /* use SYSV for < v6.5 */
 
 /* define any of the following that are appropriate */
-#define SVR4           /* use in addition to SYSV for System V Release 4 */
+// TODO graves
+// #define SVR4           /* use in addition to SYSV for System V Release 4 */
                        /* including Solaris 2+ */
-#define NETWORK        /* if running on a networked system */
+// TODO graves
+// #define NETWORK        /* if running on a networked system */
                        /* e.g. Suns sharing a playground through NFS */
 /* #define SUNOS4 */   /* SunOS 4.x */
-#ifdef __linux__
+// TODO graves
+//#ifdef __linux__
 #define LINUX    /* Another Unix clone */
-#endif
+//#endif
 /* #define CYGWIN32 */ /* Unix on Win32 -- use with case sensitive defines */
 /* #define GENIX */    /* Yet Another Unix Clone */
 /* #define HISX */     /* Bull Unix for XPS Machines */
