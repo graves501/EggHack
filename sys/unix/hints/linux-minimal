@@ -17,9 +17,15 @@ CFLAGS=-g -I../include
 
 LINK=$(CC)
 
-WINSRC = $(WINTTYSRC)
-WINOBJ = $(WINTTYOBJ)
-WINLIB = $(WINTTYLIB)
+# TODO graves: undo changes if this hint file is not needed anymore
+#WINSRC = $(WINTTYSRC)
+#WINOBJ = $(WINTTYOBJ)
+#WINLIB = $(WINTTYLIB)
+
+WINSRC = $(WINWEBSRC)
+WINOBJ = $(WINWEBOBJ)
+WINWEBLIB =
+WINLIB = $(WINWEBLIB)
 
 WINTTYLIB=-lncurses -ltinfo
 

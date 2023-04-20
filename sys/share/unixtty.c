@@ -37,7 +37,7 @@
 #endif
 #endif /* POSIX_TYPES */
 // TODO graves
-#ifdef LINUX && !defined(WEB_GRAPHICS)
+#if defined(LINUX) && !defined(WEB_GRAPHICS)
 #include <sys/ioctl.h>
 #undef delay_output /* curses redefines this */
 #include <curses.h>

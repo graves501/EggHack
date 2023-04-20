@@ -11,6 +11,8 @@ WORK_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 runLinuxMake() {
   pushd sys/unix || exit
   sh setup.sh hints/linux
+  # TODO graves: Remove once not necessary anymore
+  # sh setup.sh hints/linux-minimal
   popd || exit
   make
 }
