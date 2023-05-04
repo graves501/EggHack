@@ -5,7 +5,8 @@
 
 #include "hack.h"
 
-#if defined(TTY_GRAPHICS) || defined(X11_GRAPHICS) || defined(GEM_GRAPHICS) \
+// TODO graves
+#if defined(TTY_GRAPHICS) || defined(X11_GRAPHICS) || defined(WEB_GRAPHICS) || defined(GEM_GRAPHICS) \
     || defined(MSWIN_GRAPHICS) || defined(DUMPLOG) || defined(CURSES_GRAPHICS)
 #define TEXT_TOMBSTONE
 #endif

@@ -41,6 +41,7 @@ CFLAGS+=-DNOTTYGRAPHICS
 
 LINK=$(CC)
 # Only needed for GLIBC stack trace:
+# TODO graves
 LFLAGS=-rdynamic
 
 # TODO graves

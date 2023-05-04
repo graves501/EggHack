@@ -601,15 +601,15 @@ all:	$(GAME)
 
 # special rules, to force update of makedefs, real dependencies should be
 # below in the 'make depend' output.
+# TODO graves
 monst.o:
 	$(CC) $(CFLAGS) -c monst.c
-	# TODO graves
-	@rm -f $(MAKEDEFS)
+	#@rm -f $(MAKEDEFS)
 
+# TODO graves
 objects.o:
 	$(CC) $(CFLAGS) -c objects.c
-	# TODO graves
-	@rm -f $(MAKEDEFS)
+	#@rm -f $(MAKEDEFS)
 
 # Qt 3 windowport meta-object-compiler output
 qt_kde0.moc: ../include/qt_kde0.h
@@ -645,13 +645,13 @@ qt4yndlg.moc : ../win/Qt4/qt4yndlg.h
 
 #	build monst.o and objects.o before executing '$(MAKE) makedefs'
 # TODO graves
-$(MAKEDEFS): $(FIRSTOBJ) \
-		../util/makedefs.c $(CONFIG_H) ../include/permonst.h \
-		../include/objclass.h ../include/monsym.h \
-		../include/artilist.h ../include/dungeon.h ../include/obj.h \
-		../include/monst.h ../include/you.h ../include/flag.h \
-		../include/dlb.h ../include/patchlevel.h ../include/qtext.h
-	@( cd ../util ; $(MAKE) makedefs )
+# $(MAKEDEFS): $(FIRSTOBJ) \
+# 		../util/makedefs.c $(CONFIG_H) ../include/permonst.h \
+# 		../include/objclass.h ../include/monsym.h \
+# 		../include/artilist.h ../include/dungeon.h ../include/obj.h \
+# 		../include/monst.h ../include/you.h ../include/flag.h \
+# 		../include/dlb.h ../include/patchlevel.h ../include/qtext.h
+# 	@( cd ../util ; $(MAKE) makedefs )
 
 #	Source files created by 'makedefs' at build time.
 #	Each is given an artificial dependency upon the one before
